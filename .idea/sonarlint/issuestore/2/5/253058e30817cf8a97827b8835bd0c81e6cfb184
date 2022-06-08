@@ -1,0 +1,9 @@
+
+
+java:S1186)"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(î•Õİ8¾”Œ“”0
+o
+java:S1450 "TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ğÑœıÿÿÿÿ
+
+java:S1130-"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(Ù£Íh
+J
+java:S1068'"4Remove this unused "goToHomeMenuItem" private field.(ÌÃ µ

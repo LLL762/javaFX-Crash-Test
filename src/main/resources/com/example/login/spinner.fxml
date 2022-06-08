@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.controller.SpinnerController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="605.0">
+         <center>
+            <Spinner fx:id="spinner" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="spinnerLabel">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.4699999988079071" green="0.3558683395385742" blue="0.249099999666214" opacity="0.7709923386573792" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.8999999761581421" green="0.8968499898910522" blue="0.8730000257492065" opacity="0.7699999809265137" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="listViewLabel" alignment="CENTER" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: white;">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="listView" prefHeight="300.0" prefWidth="116.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </left>
+         <right>
+            <VBox prefHeight="300.0" prefWidth="194.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="treeViewLabel" alignment="CENTER" prefHeight="27.0" prefWidth="194.0" textFill="#f8f4f4">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <TreeView fx:id="treeView" onContextMenuRequested="#selectItem" onMouseClicked="#selectItem" prefHeight="300.0" prefWidth="107.0" />
+               </children>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
