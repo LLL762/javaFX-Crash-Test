@@ -103,6 +103,8 @@
                      </accelerator></MenuItem>
                   <MenuItem mnemonicParsing="false" onAction="#goToLamp" text=" go to lamp" />
                   <MenuItem mnemonicParsing="false" onAction="#goToSpinner" text="go to spinner" />
+                  <MenuItem mnemonicParsing="false" onAction="#goToKeyEvent" text="go to keyEvent" />
+                  <MenuItem mnemonicParsing="false" onAction="#goToMediaView" text="go to media view" />
                   <SeparatorMenuItem mnemonicParsing="false" />
                   <CheckMenuItem mnemonicParsing="false" text="Autosave" />
               <MenuItem mnemonicParsing="false" onAction="#exit" text="Close" />

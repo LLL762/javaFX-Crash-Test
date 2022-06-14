@@ -33,6 +33,7 @@ public class HomeSceneController implements Initializable {
     final FXMLLoader fxmlProfile = new FXMLLoader(HelloApplication.class.getResource("profile-scene.fxml"));
     final FXMLLoader fxmlSpinner = new FXMLLoader(HelloApplication.class.getResource("spinner.fxml"));
 
+    final FXMLLoader fxmlKeyEvent = new FXMLLoader(HelloApplication.class.getResource("key-event.fxml"));
 
     final Parent profileRoot = fxmlProfile.load();
 
@@ -41,6 +42,8 @@ public class HomeSceneController implements Initializable {
     private final Parent progressBar = fxmlLoaderProgressBar.load();
 
     private final FXMLLoader fxmlLamp = new FXMLLoader(HelloApplication.class.getResource("lamp.fxml"));
+
+    private final FXMLLoader fxmlMediaView = new FXMLLoader(HelloApplication.class.getResource("media-view.fxml"));
 
 
     private final String[] countries = {"FR", "UK", "US"};
@@ -122,12 +125,40 @@ public class HomeSceneController implements Initializable {
 
     }
 
+
+    public void goToKeyEvent() throws IOException {
+
+        final Parent keyEventRoot = fxmlKeyEvent.load();
+        Scene newScene = new Scene(keyEventRoot);
+        KeyEventController controller = fxmlKeyEvent.getController();
+
+        newScene.setOnKeyPressed(controller.getKeyEventHandler());
+
+        controller.sharkTranslate();
+        controller.rotatePackman();
+
+
+        stage = (Stage) loginAnchorPane.getScene().getWindow();
+        stage.setScene(newScene);
+
+    }
+
+
     public void goToLamp() throws IOException {
 
         final Parent lampRoot = fxmlLamp.load();
 
         stage = (Stage) loginAnchorPane.getScene().getWindow();
         stage.setScene(new Scene(lampRoot));
+
+    }
+
+    public void goToMediaView() throws IOException {
+
+        final Parent mediaViewRoot = fxmlMediaView.load();
+
+        stage = (Stage) loginAnchorPane.getScene().getWindow();
+        stage.setScene(new Scene(mediaViewRoot));
 
     }
 
@@ -168,6 +199,7 @@ public class HomeSceneController implements Initializable {
 
             return;
         }
+
 
         formattedBirthDate = birthDate.format(DateTimeFormatter.ofPattern(" EEE dd  MMM yyyy"));
 

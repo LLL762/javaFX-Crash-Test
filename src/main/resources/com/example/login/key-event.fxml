@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.controller.KeyEventController">
+   <children>
+      <BorderPane prefHeight="474.0" prefWidth="600.0">
+         <center>
+            <FlowPane alignment="CENTER" prefHeight="474.0" prefWidth="575.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="282.0" prefWidth="420.0" style="-fx-border-color: black;">
+                     <children>
+                        <Circle fx:id="movingCircle" fill="DODGERBLUE" layoutX="210.0" layoutY="141.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="shark" fitHeight="60.0" fitWidth="164.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/key-event/shark.png" />
+                           </image>
+                        </ImageView>
+                        <Arc fx:id="pacman" fill="#f1f812" layoutX="70.0" layoutY="57.0" length="270.0" radiusX="38.0" radiusY="33.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+                     </children>
+                  </Pane>
+               </children>
+            </FlowPane>
+         </center>
+         <bottom>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
